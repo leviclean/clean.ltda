@@ -507,9 +507,9 @@ html,body,main,.hero,.about,.projects,.product-section,.services,.process,.conta
 .product-gallery-track{display:flex;align-items:center;gap:var(--screen-gap);width:max-content;padding-inline:calc((100vw - var(--screen-width))/2);min-width:100%}
 .product-slide{position:relative;z-index:1;flex:0 0 var(--screen-width);width:var(--screen-width);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;--gallery-yaw:-28deg;--screen-opacity:1}
 .product-slide-plane{transform:perspective(1000px) rotateY(var(--gallery-yaw));transform-origin:50% calc(var(--screen-width)/3.2);transition:transform 560ms cubic-bezier(.18,.8,.2,1);opacity:1;background:transparent}
-.product-slide img{border:1px solid #ffffff50;border-radius:12px;display:block;width:100%;height:auto;aspect-ratio:1599/762;object-fit:contain;background:#000;user-select:none;-webkit-user-drag:none}
+.product-slide img{border:1px solid #6f94c05c;border-radius:12px;display:block;width:100%;height:auto;aspect-ratio:1599/762;object-fit:contain;background:#000;user-select:none;-webkit-user-drag:none}
 .product-slide.is-current{z-index:2;--gallery-yaw:0deg;--screen-opacity:1}
-.product-slide.is-current img{border-color:transparent;box-shadow:none}
+.product-slide.is-current img{border-color:#6f94c05c;box-shadow:none}
 .product-gallery-navigation{display:flex;align-items:center;gap:25px;width:min(1120px,calc(100% - 100px));max-width:calc(100% - 40px);margin:12px auto 0;min-height:46px}
 .product-gallery:not([data-ready]) .product-gallery-navigation{display:none}
 .product-screen-name{font-size:13px;line-height:1.3;color:#bbb;min-width:92px}
@@ -710,7 +710,7 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
 img{-webkit-user-drag:none;user-select:none}
 .hero-visor-hit img{pointer-events:none}
 .product-capabilities{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:40px}
-.product-capabilities article{padding:24px 22px;border:1px solid #ffffff24;border-radius:12px;background:linear-gradient(145deg,#0b1018,#040608 80%);min-width:0}
+.product-capabilities article{padding:24px 22px;border:1px solid #6f94c05c;border-radius:12px;background:linear-gradient(145deg,#0b1018,#040608 80%);min-width:0}
 .product-capabilities .icon{width:22px;height:22px;color:#abcfff;stroke-width:1.25;margin-bottom:25px}
 .product-capabilities h3{font-size:18px;line-height:1.25;letter-spacing:-.03em;font-weight:400;margin-bottom:13px}
 .product-capabilities p{font-size:12px;line-height:1.8;color:#959ba4}
@@ -777,6 +777,14 @@ img{-webkit-user-drag:none;user-select:none}
 .comparison-card-stage:before{content:'';position:absolute;z-index:-1;left:12%;right:8%;top:-95px;height:175px;pointer-events:none;background:radial-gradient(ellipse at 57% 75%,#255ca658 0%,#15356936 36%,transparent 74%);filter:blur(27px)}
 .comparison-card-stage:after{content:'';position:absolute;z-index:1;left:20%;right:12%;top:0;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,#638bc260 55%,transparent)}
 @media(max-width:700px){.comparison-card-stage:before{left:9%;right:9%;top:-65px;height:125px;filter:blur(20px)}.comparison-card-stage:after{left:15%;right:15%}}
+
+/* Quiet footer credit, separate from the main contact actions. */
+.site-credit{position:absolute;z-index:3;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:max(24px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:15px;padding-top:17px;border-top:1px solid #86aee51c;font-size:11px;line-height:1.6;letter-spacing:0;color:#8e99a9}
+.site-credit strong{font-weight:500;color:#c0cad9}
+.site-credit a{display:inline-flex;gap:7px;align-items:center;color:#9ca9bb;text-decoration:none}
+.site-credit a span{color:#c0cad9}
+.site-credit a:hover span{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:650px){.site-credit{left:20px;right:20px;bottom:max(20px,env(safe-area-inset-bottom));justify-content:center;flex-wrap:wrap;gap:6px 18px;text-align:center;font-size:10px;padding-top:14px}.site-credit a{gap:5px}}
 </style>
 </head>
 <body>
@@ -970,6 +978,7 @@ img{-webkit-user-drag:none;user-select:none}
 <img draggable="false" class="clean-signature" src="assets/clean-signature.png" width="1719" height="776" alt="clean" loading="lazy" decoding="async">
 <div class="studio-contact-actions"><a class="button button-light" href="https://wa.me/5582993717776?text=Oi%2C%20Levi!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>WhatsApp<svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="button button-glass" href="https://www.instagram.com/llevi.maciel/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>Instagram<svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
 </div>
+<footer class="site-credit" aria-label="Créditos"><span>Desenvolvido por <strong>Levi Maciel</strong></span><a href="https://www.instagram.com/llevi.maciel/" target="_blank" rel="noopener noreferrer">Instagram <span>@llevi.maciel</span></a></footer>
 </section>
 
 </main>
