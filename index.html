@@ -748,6 +748,29 @@ img{-webkit-user-drag:none;user-select:none}
 @media(max-width:700px){.services.service-editorial{padding-block:65px 60px}.service-editorial-layout{grid-template-columns:1fr;gap:42px}.service-editorial-heading{padding:0}.service-editorial-heading .studio-kicker{font-size:11px;margin-bottom:24px}.service-editorial-heading h2{font-size:clamp(58px,15.5vw,78px);letter-spacing:-.06em}.service-editorial-link{padding:25px 0 26px}.service-editorial-line h3{font-size:25px}.service-editorial-link p{font-size:13px;line-height:1.85;margin-top:13px;max-width:480px}.service-editorial-line .icon{width:20px;height:20px;flex-basis:20px}}
 @media(max-width:359px){.service-editorial-line h3{font-size:23px}.service-editorial-link p{font-size:12px}.service-editorial-line{gap:18px}}
 @media(prefers-reduced-motion:reduce){.service-editorial-link:after,.service-editorial-line h3,.service-editorial-line .icon{transition:none}.service-editorial-link:hover .icon{transform:none}}
+
+/* Two-panel comparison adapted from the user's CodeMakers reference. */
+.services.service-comparison{padding-block:85px 105px;background:#000;border:0;border-radius:0;color:#f4f5f7}
+.comparison-heading{max-width:850px;margin:0 auto 58px;text-align:center}
+.comparison-heading>p{font-size:12px;line-height:1.5;font-weight:400;color:#999;margin-bottom:20px}
+.comparison-heading h2{font-family:Sora,Arial,sans-serif;font-size:clamp(40px,4.6vw,66px);font-weight:400;line-height:1.05;letter-spacing:-.055em;margin:0}
+.comparison-panels{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ffffff1c;border-radius:20px;overflow:hidden;box-shadow:0 20px 55px #0006}
+.comparison-panel{display:flex;flex-direction:column;position:relative;isolation:isolate;min-width:0;min-height:600px;padding:45px}
+.comparison-panel-muted{background:#101010;color:#7d7d7d}
+.comparison-panel-clean{background:radial-gradient(ellipse at 20% 50%,#16376c70,transparent 74%),linear-gradient(130deg,#07152e,#0b2247 42%,#071b38 100%);color:#fff}
+.comparison-label{font-size:10px;line-height:1.5;font-weight:500;letter-spacing:1.3px;margin:0 0 42px;color:#949494}
+.comparison-panel-clean .comparison-label{color:#c0d7ff}
+.comparison-panel h3{font-family:Sora,Arial,sans-serif;font-size:clamp(35px,3.35vw,53px);font-weight:400;line-height:1.06;letter-spacing:-.05em;margin:0 0 48px;position:relative;z-index:1}
+.comparison-panel ul{list-style:none;padding:0;margin:auto 0 0;position:relative;z-index:1}
+.comparison-panel li{display:flex;align-items:flex-start;gap:11px;padding:14px 0;border-top:1px solid #ffffff1c;font-size:12px;line-height:1.6;letter-spacing:-.015em;color:#a1a1a1}
+.comparison-panel li>span{font-size:13px;line-height:1.5;flex:0 0 9px;color:#7d7d7d;text-align:center}
+.comparison-panel-clean li{border-color:#e1eeff38;color:#f3f7ff}
+.comparison-panel-clean li>span{color:#d6e6ff}
+.comparison-panel-clean:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(146deg,transparent 0 48%,#9ab6e30a 48.1%,#8cb6ff04 65%,transparent 100%)}
+.comparison-panel-clean:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(146deg,transparent 0 48%,#9bb9e51a 48.1%,transparent 48.25%),radial-gradient(ellipse at 65% 105%,#2b508c26,transparent 62%)}
+@media(max-width:1000px){.comparison-panel{padding:33px;min-height:560px}.comparison-panel h3{font-size:clamp(31px,3.35vw,38px)}.comparison-label{margin-bottom:35px}.comparison-panel li{font-size:11px;line-height:1.7}}
+@media(max-width:700px){.services.service-comparison{padding-block:60px 65px}.comparison-heading{margin-bottom:36px}.comparison-heading>p{font-size:11px;margin-bottom:17px}.comparison-heading h2{font-size:clamp(35px,8.7vw,47px)}.comparison-panels{grid-template-columns:1fr;border-radius:16px}.comparison-panel{min-height:0;padding:32px 27px 28px}.comparison-label{font-size:9px;margin-bottom:28px}.comparison-panel h3{font-size:clamp(31px,8.4vw,43px);line-height:1.07;margin-bottom:34px}.comparison-panel li{font-size:12px;line-height:1.7;padding-block:13px}.comparison-panel-clean{border-top:1px solid #ffffff15}}
+@media(max-width:359px){.comparison-panel{padding:30px 23px 25px}.comparison-panel h3{font-size:29px}.comparison-panel li{font-size:11px;gap:9px}.comparison-heading h2{font-size:33px}}
 </style>
 </head>
 <body>
@@ -896,25 +919,31 @@ img{-webkit-user-drag:none;user-select:none}
 <article data-reveal><svg class="icon" aria-hidden="true"><use href="#i-product"></use></svg><h3>Carteira de leads quentes</h3><p>Leads que têm interesse e necessidade em adquirir seus produtos.</p></article>
 </div>
 </section>
-<section id="servicos" class="services section-space studio-services service-editorial">
-<div class="container service-editorial-layout">
-<div class="service-editorial-heading" data-reveal><p class="studio-kicker">Especialidades</p><h2>Design &amp;<br><span>código.</span></h2></div>
-<div class="service-editorial-list"><a class="service-editorial-link" data-reveal style="--reveal-delay:0ms" href="https://wa.me/5582993717776?text=Ol%C3%A1%2C%20Levi!%20Contato%20sobre%20dire%C3%A7%C3%A3o%20visual." target="_blank" rel="noopener noreferrer" aria-label="Direção visual — conversar no WhatsApp">
-<div class="service-editorial-line"><h3>Direção visual</h3><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></div>
-<p>Cor, tipografia e composição para dar uma identidade própria ao projeto.</p>
-</a>
-<a class="service-editorial-link" data-reveal style="--reveal-delay:45ms" href="https://wa.me/5582993717776?text=Ol%C3%A1%2C%20Levi!%20Contato%20sobre%20sites%20e%20landing%20pages." target="_blank" rel="noopener noreferrer" aria-label="Sites e landing pages — conversar no WhatsApp">
-<div class="service-editorial-line"><h3>Sites e landing pages</h3><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></div>
-<p>Páginas de apresentação, portfólios e sites feitos para o seu conteúdo.</p>
-</a>
-<a class="service-editorial-link" data-reveal style="--reveal-delay:90ms" href="https://wa.me/5582993717776?text=Ol%C3%A1%2C%20Levi!%20Contato%20sobre%20interfaces%20de%20produto." target="_blank" rel="noopener noreferrer" aria-label="Interfaces de produto — conversar no WhatsApp">
-<div class="service-editorial-line"><h3>Interfaces de produto</h3><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></div>
-<p>Fluxos e telas para ferramentas, painéis e experiências que precisam funcionar.</p>
-</a>
-<a class="service-editorial-link" data-reveal style="--reveal-delay:135ms" href="https://wa.me/5582993717776?text=Ol%C3%A1%2C%20Levi!%20Contato%20sobre%20desenvolvimento." target="_blank" rel="noopener noreferrer" aria-label="Desenvolvimento — conversar no WhatsApp">
-<div class="service-editorial-line"><h3>Desenvolvimento</h3><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></div>
-<p>Interfaces responsivas, interações cuidadas e atenção ao carregamento.</p>
-</a></div>
+<section id="servicos" class="services section-space service-comparison" aria-labelledby="comparison-title">
+<div class="container">
+<div class="comparison-heading" data-reveal><p>Design e desenvolvimento</p><h2 id="comparison-title">Um site com<br>identidade própria.</h2></div>
+<div class="comparison-panels" data-reveal>
+<article class="comparison-panel comparison-panel-muted" aria-labelledby="comparison-before">
+<p class="comparison-label">SEM DIREÇÃO</p>
+<h3 id="comparison-before">Visual genérico.<br>Conteúdo confuso.<br>Layout quebrado.</h3>
+<ul>
+<li><span aria-hidden="true">×</span>Aparência igual a qualquer outra</li>
+<li><span aria-hidden="true">×</span>Hierarquia confusa na página</li>
+<li><span aria-hidden="true">×</span>Layout que quebra no celular</li>
+<li><span aria-hidden="true">×</span>Interações que atrapalham a navegação</li>
+</ul>
+</article>
+<article class="comparison-panel comparison-panel-clean" aria-labelledby="comparison-after">
+<p class="comparison-label">COM DIREÇÃO</p>
+<h3 id="comparison-after">Identidade no visual.<br>Clareza na navegação.<br>Cuidado no código.</h3>
+<ul>
+<li><span aria-hidden="true">+</span>Direção visual ligada à marca</li>
+<li><span aria-hidden="true">+</span>Conteúdo com hierarquia e leitura</li>
+<li><span aria-hidden="true">+</span>Layout para celular e desktop</li>
+<li><span aria-hidden="true">+</span>Interações leves e funcionais</li>
+</ul>
+</article>
+</div>
 </div>
 </section>
 <section id="processo" class="process section-space studio-process">
