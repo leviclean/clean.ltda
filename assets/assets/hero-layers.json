@@ -1,0 +1,26 @@
+{
+  "source": "reference-original.jpg",
+  "desktop": {
+    "width": 1600,
+    "height": 892,
+    "background": "hero-background.webp",
+    "person": "hero-person.png",
+    "crop": {
+      "left": 420,
+      "top": 250,
+      "width": 710,
+      "height": 642
+    }
+  },
+  "mobile": {
+    "width": 780,
+    "height": 1388,
+    "background": "hero-mobile-background.webp",
+    "person": "hero-mobile-person.png",
+    "personWidth": 1202,
+    "personHeight": 1087,
+    "left": -253,
+    "top": 301
+  },
+  "reconstruction": "Pixel-identical to decoded original at 1600 × 892"
+}
