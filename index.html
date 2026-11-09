@@ -771,6 +771,12 @@ img{-webkit-user-drag:none;user-select:none}
 @media(max-width:1000px){.comparison-panel{padding:33px;min-height:560px}.comparison-panel h3{font-size:clamp(31px,3.35vw,38px)}.comparison-label{margin-bottom:35px}.comparison-panel li{font-size:11px;line-height:1.7}}
 @media(max-width:700px){.services.service-comparison{padding-block:60px 65px}.comparison-heading{margin-bottom:36px}.comparison-heading>p{font-size:11px;margin-bottom:17px}.comparison-heading h2{font-size:clamp(35px,8.7vw,47px)}.comparison-panels{grid-template-columns:1fr;border-radius:16px}.comparison-panel{min-height:0;padding:32px 27px 28px}.comparison-label{font-size:9px;margin-bottom:28px}.comparison-panel h3{font-size:clamp(31px,8.4vw,43px);line-height:1.07;margin-bottom:34px}.comparison-panel li{font-size:12px;line-height:1.7;padding-block:13px}.comparison-panel-clean{border-top:1px solid #ffffff15}}
 @media(max-width:359px){.comparison-panel{padding:30px 23px 25px}.comparison-panel h3{font-size:29px}.comparison-panel li{font-size:11px;gap:9px}.comparison-heading h2{font-size:33px}}
+
+/* A diffuse midnight-blue halo lifts from the card's upper edge. */
+.comparison-card-stage{position:relative;isolation:isolate}
+.comparison-card-stage:before{content:'';position:absolute;z-index:-1;left:12%;right:8%;top:-95px;height:175px;pointer-events:none;background:radial-gradient(ellipse at 57% 75%,#255ca658 0%,#15356936 36%,transparent 74%);filter:blur(27px)}
+.comparison-card-stage:after{content:'';position:absolute;z-index:1;left:20%;right:12%;top:0;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,#638bc260 55%,transparent)}
+@media(max-width:700px){.comparison-card-stage:before{left:9%;right:9%;top:-65px;height:125px;filter:blur(20px)}.comparison-card-stage:after{left:15%;right:15%}}
 </style>
 </head>
 <body>
@@ -922,6 +928,7 @@ img{-webkit-user-drag:none;user-select:none}
 <section id="servicos" class="services section-space service-comparison" aria-labelledby="comparison-title">
 <div class="container">
 <div class="comparison-heading" data-reveal><p>Design e desenvolvimento</p><h2 id="comparison-title">Um site com<br>identidade própria.</h2></div>
+<div class="comparison-card-stage">
 <div class="comparison-panels" data-reveal>
 <article class="comparison-panel comparison-panel-muted" aria-labelledby="comparison-before">
 <p class="comparison-label">SEM DIREÇÃO</p>
@@ -943,6 +950,7 @@ img{-webkit-user-drag:none;user-select:none}
 <li><span aria-hidden="true">+</span>Interações leves e funcionais</li>
 </ul>
 </article>
+</div>
 </div>
 </div>
 </section>
